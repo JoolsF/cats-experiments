@@ -6,7 +6,7 @@ scalaVersion := "2.12.8"
 
 scalacOptions += "-Ypartial-unification"
 
-libraryDependencies += "org.typelevel" %% "cats-core" % "1.5.0"
+libraryDependencies += "org.typelevel" %% "cats-core" % "2.0.0-M1"
 
 
 
