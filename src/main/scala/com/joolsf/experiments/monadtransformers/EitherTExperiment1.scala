@@ -1,4 +1,4 @@
-package monadtransformers
+package com.joolsf.experiments.monadtransformers
 
 import cats.data.EitherT
 import cats.implicits._
@@ -7,7 +7,6 @@ import scala.concurrent.ExecutionContext.Implicits.global
 import scala.concurrent.Future
 
 object EitherTExperiment1 extends App {
-
 
   trait MyError
 
@@ -25,8 +24,7 @@ object EitherTExperiment1 extends App {
       if (succeed) {
         Right(Foo(10))
       } else {
-        //        throw new IndexOutOfBoundsException
-        Left(FooError())
+        throw new IndexOutOfBoundsException
       }
     }
 
