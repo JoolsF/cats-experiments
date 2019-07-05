@@ -16,7 +16,7 @@ object FutureOption {
     *
     * Equivalent to FutureOptionT's logIfNone
     */
-  def exceptionIfNone[A](f: Future[Option[A]])(error: ServiceError)(implicit ec: ExecutionContext): Future[A] =
+  def toFuture[A](f: Future[Option[A]])(error: ServiceError)(implicit ec: ExecutionContext): Future[A] =
     f.flatMap {
       case Some(v) =>
         Future.successful(v)

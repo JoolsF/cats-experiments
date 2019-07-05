@@ -12,5 +12,7 @@ object TestService1 {
     r.copy(value = r.value * 100)
   }
 
-  def processValue(i: Int)(implicit ec: ExecutionContext): Int = i * 3
+  def apiRequest()(implicit ec: ExecutionContext): Future[Option[Int]] = Future.successful(Some(1))
+
+  def processValues(i: Int, j: Int)(implicit ec: ExecutionContext): Int = i * j
 }
